@@ -2,7 +2,6 @@
       Custom css start
 ==========================  **/
 /* ==========  card css start  =========== */
-
 .anim-rotate {
     animation: anim-rotate 1s linear infinite;
 }
@@ -26,9 +25,12 @@
     box-shadow: $card-shadow;
     margin-bottom: 30px;
     transition: box-shadow 0.2s ease-in-out;
-    &:hover{
-        box-shadow: 0 5px 11px 0px rgba(69, 90, 100, 0.3);
+    border-top: 3px solid #8CDDCD;
+
+    &.borderless {
+        border-top: none;
     }
+
     .card-header {
         border-bottom: $card-header-border;
         position: relative;
@@ -131,7 +133,7 @@
 
     .card-block,
     .card-body {
-        padding: 20px 20px;
+        padding: 20px;
     }
 
     &.card-load {
@@ -163,8 +165,9 @@
         z-index: 99999;
         border-radius: 0;
     }
-    &[class*="bg-"]{
-        .card-header{
+
+    &[class*="bg-"] {
+        .card-header {
             border-bottom-color: rgba(255,255,255,0.25);
         }
     }

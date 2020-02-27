@@ -1,0 +1,19 @@
+.lb-cancel {
+    background: url("assets/images/loading.gif") no-repeat;
+}
+
+.lb-nav a.lb-prev {
+    background: url("assets/images/prev.png") left 48% no-repeat;
+}
+
+.lb-nav a.lb-next {
+    background: url("assets/images/next.png") right 48% no-repeat;
+}
+
+.lb-data .lb-caption a {
+    color: theme-color("primary");
+}
+
+.lb-data .lb-close {
+    background: url("assets/images/close.png") top right no-repeat;
+}

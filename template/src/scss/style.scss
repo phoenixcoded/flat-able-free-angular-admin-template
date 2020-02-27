@@ -1,6 +1,6 @@
 /**======================================================================
 =========================================================================
-Template Name: Able Pro Angular 9+ Free Admin Template
+Template Name: Flat Able Admin Template
 Author: Codedthemes
 File: style.css
 =========================================================================
@@ -20,6 +20,7 @@ File: style.css
 =================================================================================
 =================================================================================== */
 
+
 // Theme Font
 @import "themes/font/theme-font";
 
@@ -38,6 +39,7 @@ File: style.css
 // bootstrap
 @import "~bootstrap/scss/bootstrap";
 
+
 // icon
 @import "themes/font/datta-icon";
 @import "themes/font/feather";
@@ -54,6 +56,7 @@ File: style.css
 @import "themes/generic";
 @import "themes/plugin/animate";
 
+
 // theme layouts
 @import "themes/layouts/menu-lite";
 @import "themes/layouts/menu-ng";
@@ -62,10 +65,19 @@ File: style.css
 @import "themes/dashboard/widget";
 
 // custom plugin
+@import "themes/plugin/sweatalert";
+@import "themes/plugin/lightbox";
+@import "themes/plugin/rangeslider";
+@import "themes/plugin/daterange";
+@import "themes/plugin/maxlength";
 @import "themes/plugin/data-tables";
+
+// Charts
 
 // pages
 @import "themes/pages/authentication";
+@import "themes/pages/pages";
+@import "themes/pages/icon-lauouts";
 
 // custom
 @import "themes/custom";

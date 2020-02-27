@@ -8,11 +8,11 @@ import {NextConfig} from '../../../../app-config';
 })
 export class NavigationComponent implements OnInit {
   public windowWidth: number;
-  public nextConfig: any;
+  public flatConfig: any;
   @Output() onNavMobCollapse = new EventEmitter();
 
   constructor() {
-    this.nextConfig = NextConfig.config;
+    this.flatConfig = NextConfig.config;
     this.windowWidth = window.innerWidth;
   }
 

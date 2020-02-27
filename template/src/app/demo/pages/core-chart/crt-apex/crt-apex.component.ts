@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
+import {ChartDB} from '../../../../fack-db/chart-data';
 import {ApexChartService} from '../../../../theme/shared/components/chart/apex-chart/apex-chart.service';
-import {ChartDB} from './chart/chart-data';
 
 @Component({
   selector: 'app-crt-apex',
@@ -54,7 +54,7 @@ export class CrtApexComponent implements OnInit, OnDestroy {
       series: [{
         data: this.data
       }],
-      colors: ['#4680ff'],
+      colors: ['#1abc9c'],
       title: {
         text: 'Dynamic Updating Chart',
         align: 'left'

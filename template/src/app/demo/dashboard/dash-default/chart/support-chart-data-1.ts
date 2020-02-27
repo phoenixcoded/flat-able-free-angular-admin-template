@@ -2,12 +2,12 @@ export class SupportChartData1 {
   public static supportChartData = {
     chart: {
       type: 'area',
-      height: 100,
+      height: 65,
       sparkline: {
         enabled: true
       }
     },
-    colors: ['#4680ff'],
+    colors: ['#1abc9c'],
     stroke: {
       curve: 'smooth',
       width: 2,

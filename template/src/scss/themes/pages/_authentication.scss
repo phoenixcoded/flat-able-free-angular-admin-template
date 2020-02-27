@@ -10,6 +10,10 @@
     min-width: 100%;
     min-height: 100vh;
     background: $primary-color;
+    background-image: url("assets/images/auth/img-auth-big.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     @media (min-width: 1200px) {
         .container {
             max-width: 1140px;
@@ -65,6 +69,7 @@
     .card {
         margin-bottom: 0;
         padding: 8px;
+        border-radius: 8px;
 
         .card-body {
             padding: 20px 25px 20px 40px;

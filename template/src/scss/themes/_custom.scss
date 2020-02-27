@@ -1,6 +1,6 @@
 .ng-trigger-collapsedCard {
   .card-body {
-    padding-top: 0;
+    /*padding-top: 0;*/
   }
 }
 
@@ -87,7 +87,7 @@
   display: block;
 }
 
-.able-pro-accordion {
+.flat-able-accordion {
   .card-header {
     padding: 12px;
 
@@ -197,61 +197,59 @@ select-dropdown .highlighted,
 select-dropdown .selected.highlighted {
   background-color: $primary-color !important;
 }
-
-.table {
-  td,
-  th {
+.table{
+  td, th{
     font-family: $theme-font-family;
   }
 }
 
-table.dataTable {
-  tbody,
-  tfoot,
-  thead {
-    td,
-    th {
-      padding: 1.05rem 0.75rem;
-      border-color: $theme-border;
-    }
-  }
-
-  &.no-footer {
-    border-color: $theme-border;
-  }
+.search-bar {
+  display: block;
 }
 
-.dataTables_wrapper .dataTables_paginate .paginate_button {
-  &.current,
-  &.current:hover,
+/*multi-select*/
+.dual-list .listbox .record-picker::-webkit-scrollbar-thumb {
+  background: $primary-color;
+  border-color: $primary-color;
   &:hover {
-    box-shadow: none;
-    background: $primary-color;
-    border-color: $primary-color;
-    color: #fff !important;
-    outline: none !important;
-    border-radius: 50px;
+    background: #2ecc71;
+    border-color: #2ecc71;
   }
 }
-.basic-close{
-    &:focus{
-        outline: none;
-    }
+
+.menu-styler .style-block, .menu-styler .style-block-prebuild {
+  top: 175px;
+  border-radius: 4px;
 }
 
-.dataTables_length select,
-.dataTables_filter input {
-    border: none;
-    border-bottom: 1px solid #ced4da;
-    background: no-repeat center bottom, center calc(100% - 1px);
-    background-size: 0 100%, 100% 100%;
-    transition: background 0s ease-out;
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(255, 255, 255, 0);
+  }
+}
 
-    &:focus {
-        border-bottom-color: transparent;
-        background-size: 100% 100%, 100% 100%;
-        transition-duration: 0.3s;
-        box-shadow: none;
-        background-image: linear-gradient(to top, theme-color('primary') 2px, rgba(70, 128, 255, 0) 2px), linear-gradient(to top, #ced4da 1px, rgba(206, 212, 218, 0) 1px);
-    }
+@keyframes shadow-pulse-big
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 70px rgba(255, 255, 255, 0);
+  }
+}
+
+.pulse-button
+{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  background: rgb(26, 188, 156);
+  border-radius: 50%;
+  animation: shadow-pulse 1s infinite;
 }

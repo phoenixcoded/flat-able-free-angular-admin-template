@@ -37,8 +37,8 @@ const NavigationItems = [
         title: 'Dashboard',
         type: 'item',
         url: '/dashboard/default',
-        icon: 'feather icon-home',
-        classes: 'nav-item'
+        classes: 'nav-item',
+        icon: 'feather icon-home'
       },
       {
         id: 'page-layouts',
@@ -66,7 +66,7 @@ const NavigationItems = [
   },
   {
     id: 'ui-element',
-    title: 'UI Element',
+    title: 'UI ELEMENT',
     type: 'group',
     icon: 'feather icon-layers',
     children: [
@@ -178,7 +178,7 @@ const NavigationItems = [
   },
   {
     id: 'forms',
-    title: 'Forms & TAbles',
+    title: 'Forms & Table',
     type: 'group',
     icon: 'feather icon-layout',
     children: [
@@ -192,7 +192,7 @@ const NavigationItems = [
       },
       {
         id: 'bootstrap',
-        title: 'Tables',
+        title: 'Bootstrap',
         type: 'item',
         url: '/tbl-bootstrap/bt-basic',
         classes: 'nav-item',

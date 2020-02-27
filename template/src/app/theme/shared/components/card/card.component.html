@@ -3,7 +3,7 @@
     <h5 *ngIf="!customHeader">{{ cardTitle }}</h5>
     <p *ngIf="!customHeader && cardCaption" [ngClass]="captionClass">{{cardCaption}}</p>
     <div class="card-header-right" *ngIf="this.options && !customHeader">
-      <div class="btn-group card-option dropdown" ngbDropdown>
+      <div class="btn-group card-option dropdown" ngbDropdown placement="auto">
         <button type="button" class="btn dropdown-toggle btn-icon" ngbDropdownToggle>
           <i class="feather icon-more-horizontal"></i>
         </button>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NextConfig} from '../../../../../app-config';
 
 @Component({
   selector: 'app-nav-left',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-left.component.scss']
 })
 export class NavLeftComponent implements OnInit {
+  public flatConfig: any;
 
-  constructor() { }
+  constructor() {
+    this.flatConfig = NextConfig.config;
+  }
 
   ngOnInit() {
   }

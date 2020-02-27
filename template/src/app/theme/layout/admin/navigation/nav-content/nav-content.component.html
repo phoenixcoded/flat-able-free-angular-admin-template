@@ -1,17 +1,18 @@
-<perfect-scrollbar *ngIf="this.nextConfig['layout'] === 'vertical'" (clickOutside)="navMob()" [excludeBeforeClick]="true" [exclude]="'#mobile-collapse'" id="nav-ps-next" ngClass="able-pro-scroll" [style.max-width]="'300px'" [style.max-height]="'calc(100vh - 60px)'" [usePSClass]="'next'" [disabled]="null">
+<perfect-scrollbar *ngIf="this.flatConfig['layout'] === 'vertical'" (clickOutside)="navMob()" [excludeBeforeClick]="true" [exclude]="'#mobile-collapse'" id="nav-ps-flat-able" ngClass="flat-able-scroll" [style.max-width]="'300px'" [style.max-height]="'calc(100vh - 56px)'" [usePSClass]="'flat-able'" [disabled]="null">
   <div class="navbar-content">
     <div class="">
       <div class="main-menu-header">
         <img class="img-radius" src="assets/images/user/avatar-2.jpg" alt="User-Profile-Image">
         <div class="user-details" (click)="isNavProfile = !isNavProfile">
-          <div id="more-details">UX Designer <i class="fa fa-caret-down" [ngClass]="{'fa-caret-up': isNavProfile }"></i></div>
+          <span>John Doe</span>
+          <div id="more-details">UX Designer<i class="fa m-l-5" [ngClass]="{'fa-chevron-up': isNavProfile, 'fa-chevron-down': !isNavProfile }"></i></div>
         </div>
       </div>
       <div class="collapse" id="nav-user-link" *ngIf="isNavProfile" [style.display]="'block'">
-        <ul class="list-unstyled">
-          <li class="list-group-item"><a href="javascript:"><i class="feather icon-user m-r-5"></i>View Profile</a></li>
-          <li class="list-group-item"><a href="javascript:"><i class="feather icon-settings m-r-5"></i>Settings</a></li>
-          <li class="list-group-item"><a href="javascript:"><i class="feather icon-log-out m-r-5"></i>Logout</a></li>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="javascript:"><i class="feather icon-user m-r-5"></i></a></li>
+          <li class="list-inline-item"><a href="javascript:"><i class="feather icon-mail m-r-5"></i><small class="badge badge-pill badge-primary">5</small></a></li>
+          <li class="list-inline-item"><a href="javascript:" class="text-danger"><i class="feather icon-power m-r-5"></i></a></li>
         </ul>
       </div>
     </div>
@@ -23,15 +24,15 @@
       </ng-container>
     </ul>
     <app-card [hidHeader]="true" cardClass="text-center">
-      <i class="feather icon-download f-40"></i>
-      <h6 class="mt-3">Download Pro</h6>
-      <p>Getting more features with pro version</p>
-      <a href="https://1.envato.market/qG0m5" target="_blank" class="btn btn-primary btn-sm text-white m-0 has-ripple">Upgrade Now</a>
+      <i class="feather icon-sunset f-40"></i>
+      <h6 class="mt-3">Upgrade To Pro</h6>
+      <p>Please contact us on our email for need any support</p>
+      <a href="https://1.envato.market/kPo1z" target="_blank" class="btn btn-primary btn-sm text-white m-0">Support</a>
     </app-card>
   </div>
 </perfect-scrollbar>
 
-<div *ngIf="this.nextConfig['layout'] === 'horizontal'" #navbarWrapper class="navbar-content sidenav-horizontal" id="layout-sidenav">
+<div *ngIf="this.flatConfig['layout'] === 'horizontal'" #navbarWrapper class="navbar-content sidenav-horizontal" id="layout-sidenav">
   <a href="javascript:" class="sidenav-horizontal-prev" [ngClass]="prevDisabled" (click)="scrollMinus()"></a>
   <div  class="sidenav-horizontal-wrapper"><!-- add 14-4 viral -->
     <ul #navbarContent id="side-nav-horizontal" class="nav pcoded-inner-navbar sidenav-inner" (clickOutside)="fireLeave()" (mouseleave)="fireLeave()">

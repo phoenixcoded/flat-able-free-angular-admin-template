@@ -8,13 +8,13 @@ import { Location } from '@angular/common';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
-  public nextConfig: any;
+  public flatConfig: any;
   public navCollapsed: boolean;
   public navCollapsedMob: boolean;
   public windowWidth: number;
 
   constructor(private zone: NgZone, private location: Location) {
-    this.nextConfig = NextConfig.config;
+    this.flatConfig = NextConfig.config;
     let currentURL = this.location.path();
     const baseHerf = this.location['_baseHref'];
     if (baseHerf) {
@@ -23,23 +23,23 @@ export class AdminComponent implements OnInit {
 
     this.windowWidth = window.innerWidth;
 
-    if ((currentURL === baseHerf + '/layout/collapse-menu'
-      || currentURL === baseHerf + '/layout/box')
-      && (this.windowWidth >= 992 && this.windowWidth <= 1024)) {
-      this.nextConfig.collapseMenu = true;
+    if (currentURL === baseHerf + '/layout/collapse-menu'
+      || currentURL === baseHerf + '/layout/box'
+      || (this.windowWidth >= 992 && this.windowWidth <= 1024)) {
+      this.flatConfig.collapseMenu = true;
     }
 
-    this.navCollapsed = (this.windowWidth >= 992) ? this.nextConfig.collapseMenu : false;
+    this.navCollapsed = (this.windowWidth >= 992) ? this.flatConfig.collapseMenu : false;
     this.navCollapsedMob = false;
 
   }
 
   ngOnInit() {
     if (this.windowWidth < 992) {
-      this.nextConfig.layout = 'vertical';
+      this.flatConfig.layout = 'vertical';
       setTimeout(() => {
         document.querySelector('.pcoded-navbar').classList.add('menupos-static');
-        (document.querySelector('#nav-ps-next') as HTMLElement).style.maxHeight = '100%'; // 100% amit
+        (document.querySelector('#nav-ps-flat-able') as HTMLElement).style.maxHeight = '100%'; // 100% amit
       }, 500);
     }
   }

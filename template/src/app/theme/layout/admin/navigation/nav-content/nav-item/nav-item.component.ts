@@ -10,19 +10,19 @@ import {Location} from '@angular/common';
 })
 export class NavItemComponent implements OnInit {
   @Input() item: NavigationItem;
-  public nextConfig: any;
+  public flatConfig: any;
   public themeLayout: string;
 
   constructor(private location: Location) {
-    this.nextConfig = NextConfig.config;
-    this.themeLayout = this.nextConfig['layout'];
+    this.flatConfig = NextConfig.config;
+    this.themeLayout = this.flatConfig['layout'];
   }
 
   ngOnInit() {
   }
 
   closeOtherMenu(event) {
-    if (this.nextConfig['layout'] === 'vertical') {
+    if (this.flatConfig['layout'] === 'vertical') {
       const ele = event.target;
       if (ele !== null && ele !== undefined) {
         const parent = ele.parentElement;

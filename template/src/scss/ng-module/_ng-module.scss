@@ -1,8 +1,7 @@
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
 @import "~ngx-lightbox/lightbox.css";
+@import "~nouislider/distribute/nouislider.min.css";
 
-@import "~famfamfam-flags/dist/sprite/famfamfam-flags.min.css";
-
-@import "range-slidar";
-@import "ng-select";
-@import "ngx-chips";
-@import "ng2-archwizard";
+@import "ngx-perfect-scrollbar";

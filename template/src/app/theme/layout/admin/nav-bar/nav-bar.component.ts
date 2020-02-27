@@ -7,7 +7,7 @@ import {NextConfig} from '../../../../app-config';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-  public nextConfig: any;
+  public flatConfig: any;
   public menuClass: boolean;
   public collapseStyle: string;
   public windowWidth: number;
@@ -16,7 +16,7 @@ export class NavBarComponent implements OnInit {
   @Output() onNavHeaderMobCollapse = new EventEmitter();
 
   constructor() {
-    this.nextConfig = NextConfig.config;
+    this.flatConfig = NextConfig.config;
     this.menuClass = false;
     this.collapseStyle = 'none';
     this.windowWidth = window.innerWidth;

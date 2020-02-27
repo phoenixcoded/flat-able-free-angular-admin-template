@@ -1,4 +1,4 @@
-<div class="container" *ngIf="this.nextConfig.layout === 'horizontal' && this.nextConfig.subLayout === 'horizontal-2'; else mainHeader">
+<div class="container" *ngIf="this.flatConfig.layout === 'horizontal' && this.flatConfig.subLayout === 'horizontal-2'; else mainHeader">
   <ng-container *ngTemplateOutlet="mainHeader"></ng-container>
 </div>
 <ng-template #mainHeader>

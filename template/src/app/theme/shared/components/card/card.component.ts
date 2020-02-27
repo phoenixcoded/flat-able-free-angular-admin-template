@@ -65,7 +65,7 @@ export class CardComponent implements OnInit {
 
   public cardRemove: string;
 
-  constructor(/*animationService: AnimationService,*/ config: NgbDropdownConfig) {
+  constructor(config: NgbDropdownConfig) { /* animationService: AnimationService,  */
     config.placement = 'bottom-right';
     this.customHeader = false;
     this.options = true;

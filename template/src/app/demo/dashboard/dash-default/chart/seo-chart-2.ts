@@ -10,7 +10,7 @@ export class SeoChart2 {
     dataLabels: {
       enabled: false
     },
-    colors: ['#9ccc65'],
+    colors: ['#2ecc71'],
     plotOptions: {
       bar: {
         columnWidth: '60%'

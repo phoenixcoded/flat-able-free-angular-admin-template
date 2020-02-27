@@ -9,7 +9,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./nav-content.component.scss']
 })
 export class NavContentComponent implements OnInit, AfterViewInit {
-  public nextConfig: any;
+  public flatConfig: any;
   public navigation: any;
   public prevDisabled: string;
   public nextDisabled: string;
@@ -21,11 +21,11 @@ export class NavContentComponent implements OnInit, AfterViewInit {
 
   @Output() onNavMobCollapse = new EventEmitter();
 
-  @ViewChild('navbarContent', {static: false}) navbarContent: ElementRef;
-  @ViewChild('navbarWrapper', {static: false}) navbarWrapper: ElementRef;
+  @ViewChild('navbarContent') navbarContent: ElementRef;
+  @ViewChild('navbarWrapper') navbarWrapper: ElementRef;
 
   constructor(public nav: NavigationItem, private zone: NgZone, private location: Location) {
-    this.nextConfig = NextConfig.config;
+    this.flatConfig = NextConfig.config;
     this.windowWidth = window.innerWidth;
 
     this.navigation = this.nav.get();
@@ -39,16 +39,16 @@ export class NavContentComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     if (this.windowWidth < 992) {
-      this.nextConfig['layout'] = 'vertical';
+      this.flatConfig['layout'] = 'vertical';
       setTimeout(() => {
         document.querySelector('.pcoded-navbar').classList.add('menupos-static');
-        (document.querySelector('#nav-ps-next') as HTMLElement).style.maxHeight = '100%';
+        (document.querySelector('#nav-ps-flat-able') as HTMLElement).style.maxHeight = '100%';
       }, 500);
     }
   }
 
   ngAfterViewInit() {
-    if (this.nextConfig['layout'] === 'horizontal') {
+    if (this.flatConfig['layout'] === 'horizontal') {
       this.contentWidth = this.navbarContent.nativeElement.clientWidth;
       this.wrapperWidth = this.navbarWrapper.nativeElement.clientWidth;
     }
@@ -61,7 +61,7 @@ export class NavContentComponent implements OnInit, AfterViewInit {
       this.nextDisabled = 'disabled';
     }
     this.prevDisabled = '';
-    if(this.nextConfig.rtlLayout) {
+    if(this.flatConfig.rtlLayout) {
       (document.querySelector('#side-nav-horizontal') as HTMLElement).style.marginRight = '-' + this.scrollWidth + 'px';
     } else {
       (document.querySelector('#side-nav-horizontal') as HTMLElement).style.marginLeft = '-' + this.scrollWidth + 'px';
@@ -75,7 +75,7 @@ export class NavContentComponent implements OnInit, AfterViewInit {
       this.prevDisabled = 'disabled';
     }
     this.nextDisabled = '';
-    if(this.nextConfig.rtlLayout) {
+    if(this.flatConfig.rtlLayout) {
       (document.querySelector('#side-nav-horizontal') as HTMLElement).style.marginRight = '-' + this.scrollWidth + 'px';
     } else {
       (document.querySelector('#side-nav-horizontal') as HTMLElement).style.marginLeft = '-' + this.scrollWidth + 'px';
@@ -128,17 +128,17 @@ export class NavContentComponent implements OnInit, AfterViewInit {
       const up_parent = parent.parentElement.parentElement;
       const last_parent = up_parent.parentElement;
       if (parent.classList.contains('pcoded-hasmenu')) {
-        if (this.nextConfig['layout'] === 'vertical') {
+        if (this.flatConfig['layout'] === 'vertical') {
           parent.classList.add('pcoded-trigger');
         }
         parent.classList.add('active');
       } else if(up_parent.classList.contains('pcoded-hasmenu')) {
-        if (this.nextConfig['layout'] === 'vertical') {
+        if (this.flatConfig['layout'] === 'vertical') {
           up_parent.classList.add('pcoded-trigger');
         }
         up_parent.classList.add('active');
       } else if (last_parent.classList.contains('pcoded-hasmenu')) {
-        if (this.nextConfig['layout'] === 'vertical') {
+        if (this.flatConfig['layout'] === 'vertical') {
           last_parent.classList.add('pcoded-trigger');
         }
         last_parent.classList.add('active');

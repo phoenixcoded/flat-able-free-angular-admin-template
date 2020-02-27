@@ -22,13 +22,13 @@ import {NextConfig} from '../../../../../../app-config';
 export class NavCollapseComponent implements OnInit {
   public visible;
   @Input() item: NavigationItem;
-  public nextConfig: any;
+  public flatConfig: any;
   public themeLayout: string;
 
   constructor() {
     this.visible = false;
-    this.nextConfig = NextConfig.config;
-    this.themeLayout = this.nextConfig.layout;
+    this.flatConfig = NextConfig.config;
+    this.themeLayout = this.flatConfig.layout;
   }
 
   ngOnInit() {

@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'able-pro-v8.2.0'`, () => {
+  it(`should have as title 'flat-able-v8.3.3'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('able-pro-v8.2.0');
+    expect(app.title).toEqual('flat-able-v8.3.3');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to able-pro-v8.2.0!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to flat-able-v8.3.3!');
   });
 });

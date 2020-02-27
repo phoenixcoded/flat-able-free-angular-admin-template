@@ -16,24 +16,25 @@ export class ConfigurationComponent implements OnInit {
   public headerFixedLayout: any; // header fixed flag
   public boxLayout: any; // box layout flag
   public headerBackgroundColor: string; // header background color
+  public brandBackgroundColor: string; // brand/logo background color
 
   public headerBackColor: string;
 
-  public nextConfig: any;
+  public flatConfig: any;
   public isConfig: boolean;
 
   scroll = (): void => {
     if (this.headerFixedLayout === false) {
-      (document.querySelector('#nav-ps-next') as HTMLElement).style.maxHeight = 'calc(100vh)';
+      (document.querySelector('#nav-ps-flat-able') as HTMLElement).style.maxHeight = 'calc(100vh)';
       const el = document.querySelector('.pcoded-navbar.menupos-fixed') as HTMLElement;
       const scrollPosition = window.pageYOffset;
-      if (scrollPosition > 60) {
+      if (scrollPosition > 56) {
         el.style.position = 'fixed';
         el.style.transition = 'none';
         el.style.marginTop = '0';
       } else {
         el.style.position = 'absolute';
-        el.style.marginTop = '60px';
+        el.style.marginTop = '56px';
       }
     } else if (document.querySelector('.pcoded-navbar').hasAttribute('style')) {
       document.querySelector('.pcoded-navbar.menupos-fixed').removeAttribute('style');
@@ -41,31 +42,32 @@ export class ConfigurationComponent implements OnInit {
   }
 
   constructor(private zone: NgZone, private location: Location) {
-    this.nextConfig = NextConfig.config;
+    this.flatConfig = NextConfig.config;
     this.setThemeLayout();
   }
 
   ngOnInit() {
     this.styleSelectorToggle = false;
 
-    this.layoutType =  this.nextConfig.layoutType;
+    this.layoutType =  this.flatConfig.layoutType;
     this.setLayout(this.layoutType);
 
-    this.headerBackgroundColor = this.nextConfig.headerBackColor;
+    this.headerBackgroundColor = this.flatConfig.headerBackColor;
+
     this.setHeaderBackground(this.headerBackgroundColor);
 
-    this.rtlLayout = this.nextConfig.rtlLayout;
+    this.rtlLayout = this.flatConfig.rtlLayout;
     this.changeRtlLayout(this.rtlLayout);
 
-    this.menuFixedLayout = this.nextConfig.navFixedLayout;
-    if (this.nextConfig.layout === 'vertical') {
+    this.menuFixedLayout = this.flatConfig.navFixedLayout;
+    if (this.flatConfig.layout === 'vertical') {
       this.changeMenuFixedLayout(this.menuFixedLayout);
     }
 
-    this.headerFixedLayout = this.nextConfig.headerFixedLayout;
+    this.headerFixedLayout = this.flatConfig.headerFixedLayout;
     this.changeHeaderFixedLayout(this.headerFixedLayout);
 
-    this.boxLayout = this.nextConfig.boxLayout;
+    this.boxLayout = this.flatConfig.boxLayout;
     this.changeBoxLayout(this.boxLayout);
   }
 
@@ -76,67 +78,74 @@ export class ConfigurationComponent implements OnInit {
       currentURL = baseHref + this.location.path();
     }
 
+    if (currentURL.includes('?_ga=')) {
+      currentURL = (currentURL.split('?_ga=', 1))[0];
+    }
+
     switch (currentURL) {
       case baseHref + '/layout/static':
-        this.nextConfig.layout = 'vertical';
-        this.nextConfig.navFixedLayout = false;
-        this.nextConfig.headerFixedLayout = false;
+        this.flatConfig.layout = 'vertical';
+        this.flatConfig.navFixedLayout = false;
+        this.flatConfig.headerFixedLayout = false;
         break;
       case baseHref + '/layout/fixed':
-        this.nextConfig.layout = 'vertical';
-        this.nextConfig.navFixedLayout = true;
-        this.nextConfig.headerFixedLayout = true;
+        this.flatConfig.layout = 'vertical';
+        this.flatConfig.navFixedLayout = true;
+        this.flatConfig.headerFixedLayout = true;
         break;
       case baseHref + '/layout/nav-fixed':
-        this.nextConfig.layout = 'vertical';
-        this.nextConfig.navFixedLayout = true;
-        this.nextConfig.headerFixedLayout = false;
+        this.flatConfig.layout = 'vertical';
+        this.flatConfig.navFixedLayout = true;
+        this.flatConfig.headerFixedLayout = false;
         break;
       case baseHref + '/layout/collapse-menu':
-        this.nextConfig.layout = 'vertical';
-        this.nextConfig.collapseMenu = true;
+        this.flatConfig.layout = 'vertical';
+        this.flatConfig.collapseMenu = true;
         break;
       case baseHref + '/layout/vertical-rtl':
-        this.nextConfig.layout = 'vertical';
-        this.nextConfig.rtlLayout = true;
+        this.flatConfig.layout = 'vertical';
+        this.flatConfig.rtlLayout = true;
         break;
       case baseHref + '/layout/horizontal':
-        this.nextConfig.layout = 'horizontal';
-        this.nextConfig.navFixedLayout = false;
-        this.nextConfig.headerFixedLayout = false;
-        this.nextConfig.collapseMenu = false;
+        this.flatConfig.layout = 'horizontal';
+        this.flatConfig.navFixedLayout = false;
+        this.flatConfig.headerFixedLayout = false;
         break;
       case baseHref + '/layout/horizontal-l2':
-        this.nextConfig.layout = 'horizontal';
-        this.nextConfig.subLayout = 'horizontal-2';
-        this.nextConfig.navFixedLayout = false;
-        this.nextConfig.headerFixedLayout = false;
-        this.nextConfig.collapseMenu = false;
+        this.flatConfig.layout = 'horizontal';
+        this.flatConfig.subLayout = 'horizontal-2';
+        this.flatConfig.navFixedLayout = false;
+        this.flatConfig.headerFixedLayout = false;
         break;
       case baseHref + '/layout/horizontal-rtl':
-        this.nextConfig.layout = 'horizontal';
-        this.nextConfig.subLayout = 'horizontal-2';
-        this.nextConfig.navFixedLayout = false;
-        this.nextConfig.headerFixedLayout = false;
-        this.nextConfig.rtlLayout = true;
-        this.nextConfig.collapseMenu = false;
+        this.flatConfig.layout = 'horizontal';
+        this.flatConfig.subLayout = 'horizontal-2';
+        this.flatConfig.navFixedLayout = false;
+        this.flatConfig.headerFixedLayout = false;
+        this.flatConfig.rtlLayout = true;
         break;
       case baseHref + '/layout/box':
-        this.nextConfig.layout = 'vertical';
-        this.nextConfig.boxLayout = true;
-        this.nextConfig.navFixedLayout = true;
-        this.nextConfig.headerFixedLayout = false;
-        this.nextConfig.collapseMenu = true;
+        this.flatConfig.layout = 'vertical';
+        this.flatConfig.boxLayout = true;
+        this.flatConfig.headerFixedLayout = false;
+        this.flatConfig.collapseMenu = true;
         break;
       case baseHref + '/layout/light':
-        this.nextConfig.layout = 'vertical';
-        this.nextConfig.layoutType = 'menu-light';
-        this.nextConfig.headerBackColor = 'background-blue';
+        this.flatConfig.layout = 'vertical';
+        this.flatConfig.layoutType = 'menu-light';
+        this.flatConfig.headerBackColor = 'header-dark';
         break;
       case baseHref + '/layout/dark':
-        this.nextConfig.layout = 'vertical';
-        this.nextConfig.layoutType = 'dark';
-        this.nextConfig.headerBackColor = 'background-blue';
+        this.flatConfig.layout = 'vertical';
+        this.flatConfig.layoutType = 'dark';
+        this.flatConfig.headerBackColor = 'header-blue';
+        break;
+      case baseHref + '/layout/nav-color':
+        this.flatConfig.layout = 'vertical';
+        this.flatConfig.layoutType = 'menu-light';
+        this.flatConfig.headerBackColor = 'header-info';
+        this.flatConfig.navFixedLayout = true;
+        this.flatConfig.headerFixedLayout = true;
         break;
       default:
         break;
@@ -153,16 +162,19 @@ export class ConfigurationComponent implements OnInit {
     this.isConfig = true;
     document.querySelector('.pcoded-navbar').classList.remove('menu-light');
     document.querySelector('.pcoded-navbar').classList.remove('menu-dark');
-    document.querySelector('body').classList.remove('able-pro-dark');
+    document.querySelector('.pcoded-navbar').classList.remove('navbar-dark');
+    document.querySelector('body').classList.remove('flat-able-dark');
 
     this.layoutType = layout;
     if (layout === 'menu-light') {
       document.querySelector('.pcoded-navbar').classList.add(layout);
-      this.setHeaderBackground('background-blue');
     }
     if (layout === 'dark') {
-      this.setHeaderBackground('background-blue');
-      document.querySelector('body').classList.add('able-pro-dark');
+      document.querySelector('.pcoded-navbar').classList.add('navbar-dark');
+
+      this.setHeaderBackground('header-dark');
+
+      document.querySelector('body').classList.add('flat-able-dark');
     }
     if (layout === 'reset') {
       this.reset();
@@ -170,6 +182,7 @@ export class ConfigurationComponent implements OnInit {
   }
 
   reset() {
+    document.querySelector('.pcoded-navbar').classList.remove('icon-colored');
     this.ngOnInit();
   }
 
@@ -180,9 +193,9 @@ export class ConfigurationComponent implements OnInit {
 
   changeRtlLayout(flag) {
     if (flag) {
-      document.querySelector('body').classList.add('able-pro-rtl');
+      document.querySelector('body').classList.add('flat-able-rtl');
     } else {
-      document.querySelector('body').classList.remove('able-pro-rtl');
+      document.querySelector('body').classList.remove('flat-able-rtl');
     }
   }
 
@@ -196,18 +209,18 @@ export class ConfigurationComponent implements OnInit {
       if (flag) {
         document.querySelector('.pcoded-navbar').classList.remove('menupos-static');
         document.querySelector('.pcoded-navbar').classList.add('menupos-fixed');
-        if (this.nextConfig.layout === 'vertical') {
-          (document.querySelector('#nav-ps-next') as HTMLElement).style.maxHeight = 'calc(100vh - 60px)'; // calc(100vh - 70px) amit
+        if (this.flatConfig.layout === 'vertical') {
+          (document.querySelector('#nav-ps-flat-able') as HTMLElement).style.maxHeight = 'calc(100vh - 56px)'; // calc(100vh - 70px) amit
         }
         window.addEventListener('scroll', this.scroll, true);
         window.scrollTo(0, 0);
       } else {
         document.querySelector('.pcoded-navbar').classList.add('menupos-static');
         document.querySelector('.pcoded-navbar').classList.remove('menupos-fixed');
-        if (this.nextConfig.layout === 'vertical') {
-          (document.querySelector('#nav-ps-next') as HTMLElement).style.maxHeight = 'calc(100%)'; // calc(100% - 70px) amit
+        if (this.flatConfig.layout === 'vertical') {
+          (document.querySelector('#nav-ps-flat-able') as HTMLElement).style.maxHeight = 'calc(100%)'; // calc(100% - 70px) amit
         }
-        if (this.nextConfig.layout === 'vertical') {
+        if (this.flatConfig.layout === 'vertical') {
           window.removeEventListener('scroll', this.scroll, true);
         }
 
@@ -226,7 +239,7 @@ export class ConfigurationComponent implements OnInit {
     } else {
       document.querySelector('.pcoded-header').classList.remove('headerpos-fixed');
       // static
-      if (this.nextConfig.layout === 'vertical' && this.menuFixedLayout) {
+      if (this.flatConfig.layout === 'vertical' && this.menuFixedLayout) {
         window.addEventListener('scroll', this.scroll, true);
         window.scrollTo(0, 0);
       } else {
@@ -238,40 +251,33 @@ export class ConfigurationComponent implements OnInit {
   setBoxLayout(e) {
     const flag = !!(e.target.checked);
     this.changeBoxLayout(flag);
+
   }
 
   changeBoxLayout(flag) {
     if (flag) {
       document.querySelector('body').classList.add('container');
       document.querySelector('body').classList.add('box-layout');
+      this.flatConfig['box-layout'] = true;
     } else {
       document.querySelector('body').classList.remove('box-layout');
       document.querySelector('body').classList.remove('container');
+      this.flatConfig['box-layout'] = false;
     }
   }
 
   setHeaderBackground(background) {
     this.headerBackgroundColor = background;
-    document.querySelector('body').classList.remove('background-blue');
-    document.querySelector('body').classList.remove('background-red');
-    document.querySelector('body').classList.remove('background-purple');
-    document.querySelector('body').classList.remove('background-info');
-    document.querySelector('body').classList.remove('background-green');
-    document.querySelector('body').classList.remove('background-dark');
-    document.querySelector('body').classList.remove('background-grd-blue');
-    document.querySelector('body').classList.remove('background-grd-red');
-    document.querySelector('body').classList.remove('background-grd-purple');
-    document.querySelector('body').classList.remove('background-grd-info');
-    document.querySelector('body').classList.remove('background-grd-green');
-    document.querySelector('body').classList.remove('background-grd-dark');
-    document.querySelector('body').classList.remove('background-img-1');
-    document.querySelector('body').classList.remove('background-img-2');
-    document.querySelector('body').classList.remove('background-img-3');
-    document.querySelector('body').classList.remove('background-img-4');
-    document.querySelector('body').classList.remove('background-img-5');
-    document.querySelector('body').classList.remove('background-img-6');
+    this.flatConfig.headerBackColor = background;
+    document.querySelector('.pcoded-header').classList.remove('header-blue');
+    document.querySelector('.pcoded-header').classList.remove('header-red');
+    document.querySelector('.pcoded-header').classList.remove('header-purple');
+    document.querySelector('.pcoded-header').classList.remove('header-info');
+    document.querySelector('.pcoded-header').classList.remove('header-green');
+    document.querySelector('.pcoded-header').classList.remove('header-dark');
 
-    document.querySelector('body').classList.add(background);
+    document.querySelector('.pcoded-header').classList.add(background);
+
   }
 
 }

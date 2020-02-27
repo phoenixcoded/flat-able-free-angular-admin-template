@@ -6,8 +6,7 @@ body {
     font-size: $theme-font-size;
     color: $theme-font-color;
     font-weight: 400;
-    // background: $theme-background;
-    background: $primary-color;
+    background: $theme-background;
     position: relative;
 }
 
@@ -28,34 +27,35 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5{
     color: $theme-heading-color;
     font-weight: 600;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 40px;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 32px;
 }
 
 h3 {
-    font-size: 1.75rem;
+    font-size: 28px;
 }
 
 h4 {
-    font-size: 1.5rem;
+    font-size: 24px;
 }
 
 h5 {
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 h6 {
-    font-size: 0.875rem;
+    font-size: 16px;
+    color: $theme-heading-color;
+    font-weight: 400;
 }
 
 p {
@@ -73,13 +73,11 @@ strong {
 
 .page-header {
     background: transparent;
-    margin-top: -140px;
     margin-bottom: 30px;
 
     h5 {
         margin-bottom: 15px;
-        font-weight: 400;
-        color: #fff;
+        color: $theme-heading-color;
     }
 
     .page-header-title + .breadcrumb {
@@ -90,17 +88,17 @@ strong {
         > .breadcrumb-item {
             line-height: 1;
             &:before{
-                color: rgba(255,255,255,0.5);
+                color: transparentize($theme-font-color,0.4);
             }
             a {
-                color: #fff;
+                color: $theme-font-color;
                 font: {
                     weight: 400;
                 }
             }
 
             &:last-child a {
-                color: #fff;
+                color: $theme-heading-color;
                 font-weight: 600;
             }
         }
@@ -133,13 +131,8 @@ strong {
 
             h5 {
                 margin-bottom: 0;
-                color: #fff;
+
             }
-        }
-        .breadcrumb-item + .breadcrumb-item::before,
-        .page-header-title + .breadcrumb > .breadcrumb-item a,
-        .page-header-title + .breadcrumb > .breadcrumb-item:last-child a{
-            color: #fff;
         }
 
         .breadcrumb {
@@ -198,11 +191,11 @@ strong {
 
     > li,
     > .dropdown-item {
-        padding-left: 8px;
-        padding-right: 8px;
-        margin: 0 10px;
+        padding-left: 18px;
+        padding-right: 18px;
+        margin: 0;
         width: auto;
-        border-radius: 2px;
+        border-radius: 0;
 
         > a {
             padding: 5px;
@@ -717,7 +710,7 @@ pre[class*="language-"] {
     animation-duration: 1s;
     border: 5px solid #fff;
     margin-bottom: 30px;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
 }
 /* ================================    animation End  ===================== */
 /* ================================    browser  warning  Start  ===================== */

@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavSearchComponent implements OnInit {
   public isSearch: boolean;
-  constructor() {
-    this.isSearch = false;
-  }
+
+  constructor() { }
 
   ngOnInit() { }
 

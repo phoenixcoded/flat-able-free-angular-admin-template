@@ -137,7 +137,7 @@
                     text-align: left !important;
                     margin-bottom: 15px;
                     border-top: 1px solid #f1f1f1;
-                    padding-top: 15px;
+                    padding-top: 30px;
                 }
             }
         }
@@ -166,43 +166,6 @@
     }
 }
 
-.user-card2 {
-    .risk-rate {
-        display: inline-block;
-        margin: 0 auto;
-
-        span {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            border: 6px dashed #d6d6d6;
-            border-top-color: $success-color;
-            border-bottom-color: transparent;
-            padding: 45px;
-            display: block;
-            position: relative;
-
-            &:after {
-                content: "";
-                width: 90px;
-                height: 90px;
-                background-color: transparentize($success-color,0.5);
-                border-radius: 50%;
-                position: absolute;
-                top: 15px;
-                left: 15px;
-                z-index: 1;
-            }
-
-            b {
-                font-size: 20px;
-                color: #fff;
-                z-index: 2;
-                position: relative;
-            }
-        }
-    }
-}
 // =====  todo ======
 
 .to-do-list {
@@ -380,7 +343,53 @@
         }
     }
 }
+.widget-primary-card.flat-card {
+    border-top: none;
+    background-color: $primary-color;
+    color: #fff;
 
+    h4,
+    h6 {
+        color: #fff;
+    }
+
+    .row-table {
+        &:first-child {
+            border-bottom: none;
+        }
+
+        > [class*=col-] {
+            &:first-child {
+                background-color: darken($primary-color, 5%);
+                text-align: center;
+            }
+            display: inline-block;
+            vertical-align: middle;
+
+            .row {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.widget-purple-card.flat-card {
+    @extend .widget-primary-card;
+    background-color: $success-color;
+
+    .row-table {
+        &:first-child {
+            border-bottom: none;
+        }
+
+        > [class*=col-] {
+            &:first-child {
+                background-color: darken($success-color, 5%);
+            }
+        }
+    }
+}
 .latest-activity-card {
     .card-body {
         padding-top: 0;
@@ -410,7 +419,7 @@
                     text-align: left !important;
                     margin-bottom: 15px;
                     border-top: 1px solid #f1f1f1;
-                    padding-top: 15px;
+                    padding-top: 30px;
                 }
             }
         }
@@ -423,7 +432,6 @@
     }
 
     .feed-icon {
-        color: #fff;
         border-radius: 50%;
         width: 30px;
         height: 30px;
@@ -447,40 +455,8 @@
     p {
         transition: all 0.3s ease-in-out;
     }
-
-    &:hover {
-        background-color: $primary-color;
-
-        h4,
-        h6,
-        p {
-            color: #fff;
-        }
-    }
 }
 
-.user-card-full {
-    overflow: hidden;
-
-    .user-profile-side {
-        border-radius: 5px 0 0 5px;
-    }
-
-    .social-link {
-        li {
-            display: inline-block;
-
-            a {
-                i {
-                    color: $theme-font-color;
-                }
-                font-size: 20px;
-                margin: 0 10px 0 0;
-                transition: all 0.3s ease-in-out;
-            }
-        }
-    }
-}
 
 .form-icon {
     position: absolute;
@@ -693,12 +669,6 @@
 .statustic-progress-card {
     .progress {
         height: 5px;
-    }
-}
-
-.quater-card {
-    .progress {
-        height: 4px;
     }
 }
 
@@ -1300,6 +1270,7 @@
         border-radius: 50%;
         width: 30px;
         height: 30px;
+        color: #fff;
         text-align: center;
         padding: 8px 9px;
     }
@@ -1312,7 +1283,6 @@
         bottom: 0;
     }
 }
-
 .bg-pattern{
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%234680ff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E")
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%238cddcd' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
