@@ -77,7 +77,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Online Documentation
 
-Flat Able Lite version documentation cover in its Pro version documentation - check our [website.](https://able-pro-angular.gitbook.io/able-pro-8-0-angular-documentation/)
+Flat Able Lite version documentation cover in its Pro version documentation - check our [website.](https://phoenixcoded.gitbook.io/flat-able-angular/)
 
 ## Build With
 
@@ -89,7 +89,7 @@ Flat Able Lite version documentation cover in its Pro version documentation - ch
 
 ## Directory Structure
 ```
-able-pro/
+flat-able/
 ├── e2e
 |    ├── src/
 |   |   ├── app/
