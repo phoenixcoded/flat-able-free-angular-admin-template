@@ -1,10 +1,10 @@
-# Able Pro Angular 9 Free Admin Dashboard
+# Flat Able Angular 9 Free Admin Dashboard
 
-Able Pro dashboard template built using Angular 9 with Bootstrap 4 framework, It is a free lite version of [Able Pro Angular](https://codedthemes.com/item/able-pro-angular-free-admin-dashboard/) Dashboard Template will complete your admin dashboard needs.
+Flat Able dashboard template built using Angular 9 with Bootstrap 4 framework, It is a free lite version of [Flat Able Angular](http://html.phoenixcoded.net/flat-able/angular/free) Dashboard Template will complete your admin dashboard needs.
 
-<!--- ![Able Pro Angular Free Admin Template Preview Image](...) --->
+<!--- ![Flat Able Angular Free Admin Template Preview Image](...) --->
 
-Able Pro angular free admin template comes with variety of components like Alert, Button, Badges, Breadcrumb, Pagination, Card, Collapse, Carousel, Progress, Modal, Spinner, Tabs & Pills, Toasts, Icons, Form Elements, Table, Charts, Maps & Authentication Pages.
+Flat Able angular free admin template comes with variety of components like Alert, Button, Badges, Breadcrumb, Pagination, Card, Collapse, Carousel, Progress, Modal, Spinner, Tabs & Pills, Toasts, Icons, Form Elements, Table, Charts, Maps & Authentication Pages.
 
 The code structure is highly flexible to use and modify. 
 
@@ -18,27 +18,27 @@ Wish you happy to use our product in your project.
 
 ## Free Version Preview & Download
 
-Check out live preview of Able Pro angular lite version & download it.
+Check out live preview of Flat Able angular lite version & download it.
 
 #### Preview
 
- - [Demo](https://codedthemes.com/item/able-pro-angular-free-admin-dashboard/)
+ - [Demo](http://html.phoenixcoded.net/flat-able/angular/free/dashboard/default)
 
 #### Download
 
- - [Download from Github](https://github.com/phoenixcoded/able-pro-free-angular-admin-template.git)
- - [Download from CodedThemes]( https://codedthemes.com/item/able-pro-angular-free-admin-dashboard/) & receive important notification instantly in your maiL.
+ - [Download from Github](https://github.com/phoenixcoded/flat-able-free-angular-admin-template.git)
+ - [Download from Other Source]( https://codedthemes.com/item/flat-able-free-angular-4-admin-template/) & receive important notification instantly in your maiL.
  
  ## Premium Version Preview & Download
 
-Able Pro Admin Template is available to purchase. Visit its numerous demos and make your purchase decision.
+Flat Able Admin Template is available to purchase. Visit its numerous demos and make your purchase decision.
 #### Preview
 
- - [Demo](http://ableproadmin.com/)
+ - [Demo](https://1.envato.market/kPo1z)
 
 #### Download
 
- - [Purchase from Themeforest](https://themeforest.net/item/able-pro-responsive-bootstrap-4-admin-template/19300403?s_rank=12)
+ - [Purchase from Themeforest](https://1.envato.market/kPo1z)
 
 ## Table of contents
 
@@ -58,7 +58,7 @@ Able Pro Admin Template is available to purchase. Visit its numerous demos and m
 
 Clone from Github 
 ```
-git clone https://github.com/phoenixcoded/able-pro-free-angular-admin-template.git
+git clone https://github.com/phoenixcoded/flat-able-free-angular-admin-template.git
 ```
 #### Terminal Commands
 
@@ -73,15 +73,15 @@ This project was generated with Angular CLI version 9.0.2 and angular 9.x.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README] (https://github.com/angular/angular-cli/blob/master/README.md).
 
-*no other dependencies required to run the Able Pro Admin Dashboard*
+*no other dependencies required to run the Flat Able Admin Dashboard*
 
 ## Online Documentation
 
-Able Pro Lite version documentation cover in its Pro version documentation - check our [website.](https://able-pro-angular.gitbook.io/able-pro-8-0-angular-documentation/)
+Flat Able Lite version documentation cover in its Pro version documentation - check our [website.](https://able-pro-angular.gitbook.io/able-pro-8-0-angular-documentation/)
 
 ## Build With
 
- - [Angular CLI](https://github.com/angular/angular-cli) 9.0.2
+ - [Angular CLI](https://github.com/angular/angular-cli) 9.0.3
  - [Latest Bootstrap 4 Stable](https://getbootstrap.com/)
  - [SASS Powered](https://sass-lang.com/)
  - [NodeJs](https://nodejs.org/en/) v12.0.0
@@ -149,7 +149,7 @@ able-pro/
 
 <!--- ## RoadMap
     
-We are continuously working in Able Pro Angular Project and going to make it a awesome angular admin dashboard template via your support. Give us the ideas, suggestion for include more components, pages, plugins. Few of future release pages are
+We are continuously working in Flat Able Angular Project and going to make it a awesome angular admin dashboard template via your support. Give us the ideas, suggestion for include more components, pages, plugins. Few of future release pages are
  
 #### Layouts 
  - Vertical version
@@ -192,12 +192,12 @@ Please generate Github issue if you found bug in any version. We are try to be r
 
 ## License
 
- - Licensed cover under [MIT](https://github.com/phoenixcoded/able-pro-free-angular-admin-template/blob/master/LICENSE)
+ - Licensed cover under [MIT](https://github.com/phoenixcoded/flat-pro-free-angular-admin-template/blob/master/LICENSE)
 
 ## Other Dashboard Products
 
- <!--- - [Free Bootstrap 4 Admin Template](https://codedthemes.com/item/category/freebies/)
- - [Free Angular Dashboard Template](https://codedthemes.com/item/category/freebies/) --->
+ - [Free Bootstrap 4 Admin Template](https://codedthemes.com/item/category/freebies/)
+ - [Free Angular Dashboard Template](https://codedthemes.com/item/category/freebies/)
  - [Premium Bootstrap & Angular & React Admin Template](https://themeforest.net/user/phoenixcoded/portfolio)
  
 ## Social Profiles
