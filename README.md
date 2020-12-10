@@ -1,8 +1,6 @@
-# Flat Able Angular 9 Free Admin Dashboard
+# Flat Able Angular 9 Free Admin Template
 
-Flat Able dashboard template built using Angular 9 with Bootstrap 4 framework, It is a free lite version of [Flat Able Angular](http://html.phoenixcoded.net/flat-able/angular/free) Dashboard Template will complete your admin dashboard needs.
-
-<!--- ![Flat Able Angular Free Admin Template Preview Image](...) --->
+Flat Able dashboard template built using Angular 9 with Bootstrap 4 framework, It is a free lite version of [Flat Able Angular](https://codedthemes.com/item/flat-able-free-angular-4-admin-template/) Dashboard Template will complete your admin dashboard needs.
 
 Flat Able angular free admin template comes with variety of components like Alert, Button, Badges, Breadcrumb, Pagination, Card, Collapse, Carousel, Progress, Modal, Spinner, Tabs & Pills, Toasts, Icons, Form Elements, Table, Charts, Maps & Authentication Pages.
 
@@ -26,19 +24,20 @@ Check out live preview of Flat Able angular lite version & download it.
 
 #### Download
 
- - [Download from Github](https://github.com/phoenixcoded/flat-able-free-angular-admin-template.git)
- - [Download from Other Source]( https://codedthemes.com/item/flat-able-free-angular-4-admin-template/) & receive important notification instantly in your maiL.
+ - [Download from Github](https://github.com/phoenixcoded/flat-able-free-angular-admin-template)
+ - [Download from Codedthemes](https://codedthemes.com/item/flat-able-free-angular-4-admin-template/) & receive important notification instantly in your maiL.
  
  ## Premium Version Preview & Download
 
 Flat Able Admin Template is available to purchase. Visit its numerous demos and make your purchase decision.
+
 #### Preview
 
- - [Demo](https://1.envato.market/kPo1z)
+ - [Demo](http://html.phoenixcoded.net/flat-able/angular/free/dashboard/default)
 
 #### Download
 
- - [Purchase from Themeforest](https://1.envato.market/kPo1z)
+ - [Purchase from Themeforest](https://themeforest.net/item/flat-able-angular-4-admin-template/20664478)
 
 ## Table of contents
 
@@ -147,44 +146,9 @@ flat-able/
 ├── ... More
 ```
 
-<!--- ## RoadMap
-    
-We are continuously working in Flat Able Angular Project and going to make it a awesome angular admin dashboard template via your support. Give us the ideas, suggestion for include more components, pages, plugins. Few of future release pages are
- 
-#### Layouts 
- - Vertical version
-    - Static
-    - Fixed
-    - Navbar Fixed
-    - Collapse Menu
-    - Vertical RTL
- - Horizontal version
- - Horizontal v2
- - Horizontal RTL
- - Box Layout
- - Navbar Dark
- - Dark Layout
- - Introduce Live Customizer (i.e. only for demo)
- 
-#### Pages
- - Pricing
- - Login/Register pages version 2
- - User profile
- - Maintenance Pages like Error Pages, Offline UI, Maintenance
-
-#### Basic & Advance Components
- - Alert, Button, Cards, Progress, Modal, Tabs & Pills
- - Datepicker, Notification, Slider
-
-*All above pages already included in Pro version. We need your support to include those pages in lite version too.* --->
-
 ## Author
 
 Design and code is completely written by Themeforest's design and development team. We are happy to welcome the contributors work for our all repositiories.
-
-<!--- ## Contributing
-```
-Please read [CONTRIBUTING.md](https://github.com/codedthemes/datta-able-bootstrap-dashboard/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us. --->
 
 ## Issues
 
@@ -201,9 +165,8 @@ Please generate Github issue if you found bug in any version. We are try to be r
  - [Premium Bootstrap & Angular & React Admin Template](https://themeforest.net/user/phoenixcoded/portfolio)
  
 ## Social Profiles
-
- - Dribbble [https://dribbble.com/phoenixcoded](https://dribbble.com/phoenixcoded)
- - Behance [https://www.behance.net/phoenixcoded](https://www.behance.net/phoenixcoded)
- - Facebook [https://www.facebook.com/phoenixcoded](https://www.facebook.com/phoenixcoded)
- - Twitter [https://twitter.com/phoenixcoded](https://twitter.com/phoenixcoded)
- - Instagram [https://www.instagram.com/phoenixcoded/](https://www.instagram.com/phoenixcoded/)
+ - Dribbble [https://dribbble.com/codedthemes](https://dribbble.com/codedthemes)
+ - Behance [https://www.behance.net/codedthemes](https://www.behance.net/codedthemes)
+ - Facebook [https://www.facebook.com/codedthemes](https://www.facebook.com/codedthemes)
+ - Twitter [https://twitter.com/codedthemes](https://twitter.com/codedthemes)
+ - Instagram [https://www.instagram.com/codedthemes/](https://www.instagram.com/codedthemes/)
