@@ -24,7 +24,7 @@
     "@ng-bootstrap/ng-bootstrap": "^4.2.1",
     "apexcharts": "^3.8.0",
     "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "moment": "^2.24.0",
     "ng-click-outside": "^4.0.0",
     "ng-number-formatter": "^1.5.0",
